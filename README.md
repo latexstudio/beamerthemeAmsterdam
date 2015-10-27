@@ -14,8 +14,14 @@ The local texmf directory can be found at `/usr/local/texlive/texmf-local`
 
 You might want to run the following commands:
 
-- `mkdir -p /usr/local/texlive/texmf-local/tex/latex/local/beamer/themes/theme/`
-- `mkdir -p /usr/local/texlive/texmf-local/tex/latex/local/beamer/themes/outer/`
-- `mkdir -p /usr/local/texlive/texmf-local/tex/latex/local/beamer/themes/color/`
+```
+mkdir -p /usr/local/texlive/texmf-local/tex/latex/local/beamer/themes/theme/
+mkdir -p /usr/local/texlive/texmf-local/tex/latex/local/beamer/themes/outer/
+mkdir -p /usr/local/texlive/texmf-local/tex/latex/local/beamer/themes/color/
+```
 
-Copy the files to their respective directories, and then run: `texhash /usr/local/texlive/texmf-local`
+Copy the files to their respective directories, and then run: 
+
+```
+texhash /usr/local/texlive/texmf-local
+```
