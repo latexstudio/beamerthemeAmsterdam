@@ -1,0 +1,101 @@
+\documentclass[]{beamer}
+\usetheme{Amsterdam}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{type1cm}
+\usepackage{fix-cm}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage[]{natbib}
+
+% some beamer options
+\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{section in toc}[sections numbered]
+
+% presentation info
+\title{An Interesting Title}
+\subtitle{Subtitle}
+\author{The Author}
+%\date{}
+\institute[UvA]{\includegraphics[height=1.5cm]{uva_logo.pdf}}
+\logo{}
+
+\begin{document}
+
+% Insert Table of Contents at every section
+\AtBeginSection[]{
+  \begin{frame}<beamer>
+      \frametitle{Outline} 
+      \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+% Insert Table of Contents at every subsection
+\AtBeginSubsection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+% title page
+\frame[plain]{
+	\titlepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                S E C T I O N                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section[Outline]{}
+\setcounter{tocdepth}{2}
+\frame{
+  \frametitle{Outline}
+  \tableofcontents
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                S E C T I O N                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+  \frametitle{Introduction}
+
+  The first slide.
+
+  \begin{itemize}
+  	\item Some 
+    \item Items
+  	\item Here
+  \end{itemize}
+
+  \pause
+
+  \begin{flushleft}
+    After the break.
+  \end{flushleft}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bibliography
+\begin{frame}{Bibliography}	
+  \tiny	
+	\bibliographystyle{apalike}
+	\bibliography{papers} % assuming "papers.bib"
+\end{frame}
+
+\end{document}
